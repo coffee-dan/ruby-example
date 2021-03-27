@@ -6,6 +6,7 @@ class MegaGreeter
 	# names is dynamically typed, logically can be nil|string|string[]
 	# programmtically it can be any type and that's not really handled?
 	# but maybe it doesn't need to as the only big diff is list vs non-list
+	# "duck" typing, lets method be extensible
 	attr_accessor :names
 
 	# Create the object with default val "world"
@@ -43,7 +44,8 @@ class MegaGreeter
 	end
 end
 
-# "main" function
+# "main" code file
+# if this is the main file being used...
 if __FILE__ == $0
 	mg = MegaGreeter.new
 	mg.say_hi
